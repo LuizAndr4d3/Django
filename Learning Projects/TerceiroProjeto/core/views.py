@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+class IndexView(TemplateView):
+    template_name = 'index.html'
+
+class Error400View(TemplateView):
+    template_name = '404.html'
+
+class Error500View(TemplateView):
+    template_name = '500.html'
