@@ -2,6 +2,7 @@ from django.db import models
 import uuid
 from stdimage.models import StdImageField
 # Create your models here.
+
 def get_file_path(_instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4()}.{ext}'
